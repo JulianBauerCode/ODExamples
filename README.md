@@ -9,8 +9,8 @@
  - [Documentation](doc/doc.pdf)
  - Solutions in subfolders
  - This REAMDE.md-file (see below)
-   - [Usage](#Usage)
-   - [Installation](#Installation)
+   - [Usage](#usage)
+   - [Installation](#installation)
 
 --------------------------------------------------
 
@@ -20,7 +20,7 @@
 
 - Download repository manually as .zip-file and extract **OR**
 
-- If you have [git installed](#Installation), clone the repo with
+- If you have [git installed](#installation), clone the repo with
 
 `git clone https://github.com/JulianBauerCode/ODExamples.git`
 
@@ -30,6 +30,7 @@
 - Using ipython3
 
 `ipython3`
+
 `%run script.py`
 
 - Using python3
