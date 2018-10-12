@@ -1,0 +1,95 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{{./pictures/}}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,bookmarksopen=true]{hyperref}
+\usepackage{placeins}
+\usepackage{listings}
+\usepackage{siunitx}
+
+\usepackage[left=3cm, right=3cm, top=3cm]{geometry}
+
+\usepackage{fancyhdr}	% Fancy footer and header
+\usepackage{lastpage}	% Get total number of pages
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{}
+\rfoot{\thepage{} von \pageref{LastPage}}	%https://tex.stackexchange.com/a/32537
+
+\author{Julian Bauer}
+\title{ODExamples}
+
+\include{00_macro}
+
+%Avoid indentation of new paragraphs
+\setlength{\parindent}{0pt}
+
+%%Add 4-th level of sections
+% Adjust formattign of paragraph
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+%\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+%\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+%\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+
+
+
+
+
+\begin{document}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Dummy}
+\subsection{Damage evolution}
+
+\subsubsection{Parameter}
+\subsubsection{Kraftberechnung}
+\subsection{Schädigung}
+\subsubsection{Initiierung}
+\subsubsection{Entwicklung}
+
+
+\newpage
+\listoffigures
+\listoftables
+\lstlistoflistings
+\bibliographystyle{./my_elsart-harv_engl}
+\bibliography{./bib}
+\end{document}
