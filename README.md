@@ -27,19 +27,19 @@
 
 ## Python
 
-- Using ipython3
+### Using ipython3
 
-`ipython3`
+        ipython3
 
-`%run script.py`
+        %run script.py
 
-- Using python3
+### Using python3
 
-`python3 script.py`
+        python3 script.py
 
-- Using python3 interactively (variables are accessible after execution)
+interactively (variables are accessible after execution)
 
-`python3 -i script.py`
+        python3 -i script.py
 
 --------------------------------------------------
 

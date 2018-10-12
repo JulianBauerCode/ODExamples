@@ -14,7 +14,7 @@ k = [0.1, 0.2, 0.3]     # Mol / second
 
 # Define rate as function
 def kineticsSimple(t, y):
-    '''Pass k into funtcion as global variable'''
+    '''Pass k into function as global variable'''
     return ( k[0] * y[0]          * np.array([-1.0, 1.0, 0.0]) \
            + k[1] * y[1] * y[2]   * np.array([ 1.0,-1.0, 0.0]) \
            + k[2] * y[1]          * np.array([ 0.0,-1.0, 1.0]) )
@@ -37,6 +37,7 @@ for indexComp, comp in enumerate(sol.y):
 ax.set_ylabel('Concentration')
 ax.set_xlabel('Time')
 ax.legend()
+plt.savefig('simple.png')
 
 
 ##################################################################
@@ -83,6 +84,7 @@ for index, method in enumerate(methods):
 ax.set_ylabel('Concentration')
 ax.set_xlabel('Time')
 ax.legend()
+plt.savefig('influence_method.png')
 
 ##################################################################
 # Study kinetics parameter
@@ -125,6 +127,7 @@ for index, k in enumerate(studyK):
 ax.set_ylabel('Concentration')
 ax.set_xlabel('Time')
 ax.legend()
+plt.savefig('influence_k.png')
 
 
 ##################################################################
@@ -168,26 +171,7 @@ for index, y0 in enumerate(studyY0):
 ax.set_ylabel('Concentration')
 ax.set_xlabel('Time')
 ax.legend()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+plt.savefig('influence_y0.png')
 
 plt.show()
 

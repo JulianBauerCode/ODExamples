@@ -1,0 +1,367 @@
+% SCHRIFTGROESSE
+\newcommand{\Ds}{\displaystyle}
+\newcommand{\Ts}{\textstyle}
+\newcommand{\Ss}{\scriptstyle}%
+% OPERATOREN
+\newcommand{\est}{\mathrel{\hat{=}}}
+\renewcommand{\d}{{\,\rm  d}}
+\newcommand{\D}{{\,\rm  D}}
+\newcommand{\inc}{{\,\rm  \delta}}
+\newcommand{\dt}{\triangle t}
+\newcommand{\T}[1]{{#1}^{\sf  T}}
+\newcommand{\I}[1]{{#1}^{\rm -1}}
+%\newcommand{ \I}[1]{{#1}^{{\mbox{\rule[0.7mm]{0.9mm}{0.2mm}}\sf 1}}}
+\newcommand{\IT}[1]{{#1}^{\sf  -T}}
+%\newcommand{\IT}[1]{{#1}^{{\mbox{\rule[0.7mm]{0.9mm}{0.2mm}}\sf T}}}
+\newcommand{\pd}[2]{\displaystyle\frac{\partial #1}{\partial #2}}
+\newcommand{\td}[2]{\frac{{\rm d} #1}{{\rm d} #2}}
+\newcommand{\pdn}[3]{\displaystyle\frac{\partial^{#3} #1}{\partial #2^{#3}}}
+\newcommand{\tdn}[3]{\frac{{\rm d}^{#3} #1}{{\rm d} #2^{#3}}}
+\newcommand{\pdf}[2]{\displaystyle{\partial #1}{/\partial #2}}
+\newcommand{\tdf}[2]{\displaystyle{\d #1}{/\d #2}}
+\newcommand{\tdfn}[3]{\displaystyle{\d^{#3} #1}{/\d #2^{#3}}}
+\newcommand{\pdfn}[3]{\displaystyle{\partial^{#3} #1}{/\partial #2^{#3}}}
+\newcommand{\z}[1]{{\tilde{#1}}}
+\newcommand{\abs}[1]{|#1|}
+\newcommand{\absg}[1]{\left| #1 \right|}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newcommand{\normg}[1]{\left\Vert \, #1 \, \right\Vert}
+\newcommand{\sign}[1]{{\rm sgn}\left( #1 \right)}
+\newcommand{\grad}[1]{{\rm grad}\left( #1 \right)}
+\renewcommand{\div}[1]{{\rm div }\left( #1 \right)}
+%\newcommand{\rot}[1]{{\rm rot }\left( #1 \right)}
+\newcommand{\rot}[1]{{\rm curl }\left( #1 \right)}
+\newcommand{\Grad}[1]{{\rm Grad}\left( #1 \right)}
+\newcommand{\Div}[1]{{\rm Div }\left( #1 \right)}
+\newcommand{\Rot}[1]{{\rm Curl }\left( #1 \right)}
+%\newcommand{\Rot}[1]{{\rm Rot }\left( #1 \right)}
+\newcommand{\tr}[1]{{\rm tr  }( #1 )}
+\newcommand{\cof}[1]{{\rm cof  }( #1 )}
+\renewcommand{\det}[1]{{\rm det }( #1 )}
+\newcommand{\dev}[1]{{\rm dev}( #1 )}
+\newcommand{\fsym}[1]{{\rm sym }( #1 )}
+\newcommand{\fskw}[1]{{\rm skw }( #1 )}
+\newcommand{\unit}[1]{~\rm #1}
+\newcommand{\lb}{\left(}
+\newcommand{\rb}{\right)}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\ls}{\{}
+\newcommand{\rs}{\}}
+\newcommand{\jl}{\llbracket} %Sprungklammern
+\newcommand{\jr}{\rrbracket} %Sprungklammern
+% Farben
+%\newcommand{\cred}{}
+%\newcommand{\cblue}{}
+%\newcommand{\cgreen}{}
+\newcommand{\cred }{\color{red}}
+\newcommand{\cblue }{\color{blue}}
+\newcommand{\cgreen }{\color{green}}
+%MARKER
+\newcommand{\ma}{$\bigstar$}
+\newcommand{\mb}{$\blacksquare$}
+
+% ABSCHNITT-STYLES
+\newcommand{\fliterature}[1]{{\tiny #1}}
+\newcommand{\f}[1]{\mbox{$ #1 $}}
+%\newcommand{\ffbox}[1]{\begin{displaymath}\mbox{\fboxsep=.1in \framebox{$ #1 $}}\end{displaymath}}
+\newcommand{\eqnbox}[2]{\begin{equation}\mbox{\fboxsep=#1 \framebox{$\Ds #2 $}}\end{equation}}
+\newcommand{\topic}[1]{\vspace*{2mm}{\bf  #1.}}
+\newcommand{\supplement}[2]{{\scriptsize $\blacktriangledown$ {\bf Ergänzung: #1.} #2}}
+%%%\newcommand{\example}[2]{{\scriptsize $\blacktriangleright$ {\bf Beispiel: #1.} #2}}
+%
+% INDIZES
+\newcommand{\ta}{{}^n}
+\newcommand{\tb}{{}^{n+1}}
+\newcommand{\tba}{{}^{n+1}_i}
+\newcommand{\tbb}{{}^{n+1}_{i+1}}
+\renewcommand{\r}[2]{{#2_{\langle #1 \rangle}}}
+%
+%
+% ROEMISCHE ZAHLEN
+\newcommand{\rI}{{\mathit{I}}}
+\newcommand{\rII}{{\mathit{II}}}
+\newcommand{\rIII}{{\mathit{III}}}
+% FETTE BUCHSTABEN
+%\newcommand{\st y}[1]{{\bf #1}}
+\newcommand{\sty}[1]{\mbox{\boldmath $#1$}}
+%\newcommand{\styy}[1]{\mbox{\boldmath $\sf #1$}}
+\newcommand{\styy}[1]{{\mathbb{#1}}}
+
+\newcommand{\fZero}{\sty{ 0}}
+
+\newcommand{\fa}{\sty{ a}}
+\newcommand{\fb}{\sty{ b}}
+\newcommand{\fc}{\sty{ c}}
+\newcommand{\fd}{\sty{ d}}
+\newcommand{\fe}{\sty{ e}}
+\newcommand{\ff}{\sty{ f}}
+\newcommand{\fg}{\sty{ g}}
+\newcommand{\fh}{\sty{ h}}
+%\renewcommand{\fi}{\sty{ i}}
+\newcommand{\fj}{\sty{ j}}
+\newcommand{\fk}{\sty{ k}}
+\newcommand{\fl}{\sty{ l}}
+\newcommand{\fm}{\sty{ m}}
+\newcommand{\fn}{\sty{ n}}
+\newcommand{\fo}{\sty{ o}}
+\newcommand{\fp}{\sty{ p}}
+\newcommand{\fq}{\sty{ q}}
+\newcommand{\fr}{\sty{ r}}
+\newcommand{\fs}{\sty{ s}}
+\newcommand{\ft}{\sty{ t}}
+\newcommand{\fu}{\sty{ u}}
+\newcommand{\fv}{\sty{ v}}
+\newcommand{\fw}{\sty{ w}}
+\newcommand{\fx}{\sty{ x}}
+\newcommand{\fy}{\sty{ y}}
+\newcommand{\fz}{\sty{ z}}
+%
+\newcommand{\cfu}{\check{\fu}}
+\newcommand{\cfv}{\check{\fv}}
+\newcommand{\cfp}{\check{\fp}}
+\newcommand{\cfD}{\check{\fD}}
+\newcommand{\cfeps}{\check{\feps}}
+\newcommand{\cftau}{\check{\ftau}}
+\newcommand{\cfsigma}{\check{\fsigma}}
+%
+\newcommand{\hfu}{\hat{\fu}}
+\newcommand{\hft}{\hat{\ft}}
+\newcommand{\hfb}{\hat{\fb}}
+\newcommand{\hfeps}{\hat{\feps}}
+\newcommand{\hfsigma}{\hat{\fsigma}}
+%
+\newcommand{\ffa}{\styy{ a}}
+\newcommand{\ffb}{\styy{ b}}
+\newcommand{\ffc}{\styy{ c}}
+\newcommand{\ffd}{\styy{ d}}
+\newcommand{\ffe}{\styy{ e}}
+\newcommand{\fff}{\styy{ f}}
+\newcommand{\ffg}{\styy{ g}}
+\newcommand{\ffh}{\styy{ h}}
+%\renewcommand{\fi}{\styy{ i}}
+\newcommand{\ffj}{\styy{ j}}
+\newcommand{\ffk}{\styy{ k}}
+\newcommand{\ffl}{\styy{ l}}
+\newcommand{\ffm}{\styy{ m}}
+\newcommand{\ffn}{\styy{ n}}
+\newcommand{\ffo}{\styy{ o}}
+\newcommand{\ffp}{\styy{ p}}
+\newcommand{\ffq}{\styy{ q}}
+\newcommand{\ffr}{\styy{ r}}
+\newcommand{\ffs}{\styy{ s}}
+\newcommand{\fft}{\styy{ t}}
+\newcommand{\ffu}{\styy{ u}}
+\newcommand{\ffv}{\styy{ v}}
+\newcommand{\ffw}{\styy{ w}}
+\newcommand{\ffx}{\styy{ x}}
+\newcommand{\ffy}{\styy{ y}}
+\newcommand{\ffz}{\styy{ z}}
+%
+\newcommand{\fA}{\sty{ A}}
+\newcommand{\fB}{\sty{ B}}
+\newcommand{\fC}{\sty{ C}}
+\newcommand{\fD}{\sty{ D}}
+\newcommand{\fE}{\sty{ E}}
+\newcommand{\fF}{\sty{ F}}
+\newcommand{\zfF}{\tilde{\sty{ F}}}
+\newcommand{\fG}{\sty{ G}}
+\newcommand{\fH}{\sty{ H}}
+\newcommand{\fI}{\sty{ I}}
+\newcommand{\fJ}{\sty{ J}}
+\newcommand{\fK}{\sty{ K}}
+\newcommand{\fL}{\sty{ L}}
+\newcommand{\fM}{\sty{ M}}
+\newcommand{\fN}{\sty{ N}}
+\newcommand{\fO}{\sty{ 0}}
+\newcommand{\fP}{\sty{ P}}
+\newcommand{\fQ}{\sty{ Q}}
+\newcommand{\fR}{\sty{ R}}
+\newcommand{\fS}{\sty{ S}}
+\newcommand{\fT}{\sty{ T}}
+\newcommand{\fU}{\sty{ U}}
+\newcommand{\fV}{\sty{ V}}
+\newcommand{\fW}{\sty{ W}}
+\newcommand{\fX}{\sty{ X}}
+\newcommand{\fY}{\sty{ Y}}
+\newcommand{\fZ}{\sty{ Z}}
+%
+\newcommand{\bfA}{\bar{\sty{ A}}}
+\newcommand{\bfB}{\bar{\sty{ B}}}
+\newcommand{\bfC}{\bar{\sty{ C}}}
+\newcommand{\bfD}{\bar{\sty{ D}}}
+\newcommand{\bfE}{\bar{\sty{ E}}}
+\newcommand{\bfF}{\bar{\sty{ F}}}
+\newcommand{\bfG}{\bar{\sty{ G}}}
+\newcommand{\bfH}{\bar{\sty{ H}}}
+\newcommand{\bfI}{\bar{\sty{ I}}}
+\newcommand{\bfJ}{\bar{\sty{ J}}}
+\newcommand{\bfK}{\bar{\sty{ K}}}
+\newcommand{\bfL}{\bar{\sty{ L}}}
+\newcommand{\bfM}{\bar{\sty{ M}}}
+\newcommand{\bfN}{\bar{\sty{ N}}}
+\newcommand{\bfO}{\bar{\sty{ 0}}}
+\newcommand{\bfP}{\bar{\sty{ P}}}
+\newcommand{\bfQ}{\bar{\sty{ Q}}}
+\newcommand{\bfR}{\bar{\sty{ R}}}
+\newcommand{\bfS}{\bar{\sty{ S}}}
+\newcommand{\bfT}{\bar{\sty{ T}}}
+\newcommand{\bfU}{\bar{\sty{ U}}}
+\newcommand{\bfV}{\bar{\sty{ V}}}
+\newcommand{\bfW}{\bar{\sty{ W}}}
+\newcommand{\bfX}{\bar{\sty{ X}}}
+\newcommand{\bfY}{\bar{\sty{ Y}}}
+\newcommand{\bfZ}{\bar{\sty{ Z}}}
+\newcommand{\bfeps}{\bar{\feps}}
+\newcommand{\bfsigma}{\bar{\fsigma}}
+\newcommand{\bftau}{\bar{\ftau}}
+%
+\newcommand{\ffA}{\styy{ A}}
+\newcommand{\ffB}{\styy{ B}}
+\newcommand{\ffC}{\styy{ C}}
+\newcommand{\ffD}{\styy{ D}}
+\newcommand{\ffE}{\styy{ E}}
+\newcommand{\ffF}{\styy{ F}}
+\newcommand{\ffG}{\styy{ G}}
+\newcommand{\ffH}{\styy{ H}}
+\newcommand{\ffI}{\styy{ I}}
+\newcommand{\ffJ}{\styy{ J}}
+\newcommand{\ffK}{\styy{ K}}
+\newcommand{\ffL}{\styy{ L}}
+\newcommand{\ffM}{\styy{ M}}
+\newcommand{\ffN}{\styy{ N}}
+\newcommand{\ffO}{\styy{ O}}
+\newcommand{\ffP}{\styy{ P}}
+\newcommand{\ffQ}{\styy{ Q}}
+\newcommand{\ffR}{\styy{ R}}
+\newcommand{\ffS}{\styy{ S}}
+\newcommand{\ffT}{\styy{ T}}
+\newcommand{\ffU}{\styy{ U}}
+\newcommand{\ffV}{\styy{ V}}
+\newcommand{\ffW}{\styy{ W}}
+\newcommand{\ffX}{\styy{ X}}
+\newcommand{\ffY}{\styy{ Y}}
+\newcommand{\ffZ}{\styy{ Z}}
+%
+\newcommand{\falpha}{\mbox{\boldmath $\alpha$}}
+\newcommand{\fchi}{\mbox{\boldmath $\chi$}}
+\newcommand{\fdelta}{\mbox{\boldmath $\delta$}}
+\newcommand{\ftau}{\mbox{\boldmath $\tau$}}
+\newcommand{\fsigma}{\mbox{\boldmath $\sigma$}}
+\newcommand{\fDelta}{\mbox{\boldmath $\Delta$}}
+\newcommand{\fomega}{\mbox{\boldmath $\omega$}}
+\newcommand{\fOmega}{\mbox{\boldmath $\Omega$}}
+\newcommand{\fLambda}{\mbox{\boldmath $\Lambda$}}
+\newcommand{\fxi}{\mbox{\boldmath $\xi $}}
+\newcommand{\fXi}{\mbox{\boldmath $\Xi $}}
+\newcommand{\feps}{\mbox{\boldmath $\varepsilon $}}
+\newcommand{\fgamma}{\mbox{\boldmath $\gamma $}}
+\newcommand{\fGamma}{\mbox{\boldmath $\Gamma $}}
+\newcommand{\fSigma}{\mbox{\boldmath $\Sigma $}}
+\newcommand{\fPi}{\mbox{\boldmath $\Pi $}}
+\newcommand{\fPhi}{\mbox{\boldmath $\Phi $}}
+\newcommand{\fphi}{\mbox{\boldmath $\phi $}}
+\newcommand{\fvarphi}{\mbox{\boldmath $\varphi $}}
+\newcommand{\fPsi}{\mbox{\boldmath $\Psi $}}
+\newcommand{\fJota}{{\bf I}}
+\newcommand{\fepsi}{\mbox{\boldmath $\epsilon $}}
+%
+\newcommand{\cA}{{\cal A}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\cC}{{\cal C}}
+\newcommand{\cD}{{\cal D}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\cG}{{\cal G}}
+\newcommand{\cH}{{\cal H}}
+\newcommand{\cI}{{\cal I}}
+\newcommand{\cJ}{{\cal J}}
+\newcommand{\cK}{{\cal K}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\cO}{{\cal O}}
+\newcommand{\cP}{{\cal P}}
+\newcommand{\cQ}{{\cal Q}}
+\newcommand{\cR}{{\cal R}}
+\newcommand{\cS}{{\cal S}}
+\newcommand{\cT}{{\cal T}}
+\newcommand{\cU}{{\cal U}}
+\newcommand{\cV}{{\cal V}}
+\newcommand{\cW}{{\cal W}}
+\newcommand{\cX}{{\cal X}}
+\newcommand{\cY}{{\cal Y}}
+\newcommand{\cZ}{{\cal Z}}
+%%%%%%%%%%%%%%%%%%%%added by Julian Bauer
+%vector
+\newcommand{\vb}{\mbox{$\underline{\smash{b}}$}}
+\newcommand{\vf}{\mbox{$\underline{\smash{f}}$}}
+\newcommand{\vp}{\mbox{$\underline{\smash{p}}$}}
+\newcommand{\vx}{\mbox{$\underline{\smash{x}}$}}
+%\newcommand{\vn}{\mbox{$\underline{\smash{n}}$}}
+%\newcommand{\vA}{\mbox{$\underline{\smash{A}}$}}
+%\newcommand{\vB}{\mbox{$\underline{\smash{B}}$}}
+%\newcommand{\vC}{\mbox{$\underline{\smash{C}}$}}
+%\newcommand{\vD}{\mbox{$\underline{\smash{D}}$}}
+%\newcommand{\vE}{\mbox{$\underline{\smash{E}}$}}
+%\newcommand{\vS}{\mbox{$\underline{\smash{S}}$}}
+\newcommand{\vn}{\fn}
+\newcommand{\vA}{\fa}
+\newcommand{\vB}{\fb}
+\newcommand{\vC}{\fc}
+\newcommand{\vD}{\fd}
+\newcommand{\vE}{\fe}
+\newcommand{\vS}{\fs}
+\newcommand{\veps}{\mbox{$\underline{\varepsilon}$}}
+\newcommand{\vt}{\mbox{$\underline{t}$}}
+\newcommand{\vu}{\mbox{$\underline{u}$}}
+
+%matrix
+\newcommand{\mA}{\mbox{$\underline{\underline{\smash{A}}}$}}
+\newcommand{\mE}{\mbox{$\underline{\underline{E}}$}}
+
+%Mengen
+\newcommand{\Nnatural}{\mbox{$\mathbb{N}$}}
+\newcommand{\Rreal}{\mbox{$\mathbb{R}$}}
+
+%specific
+\newcommand{\aAOI}{\mbox{$a_{\text{aoi}}$}}
+\newcommand{\Zver}{\mbox{$Z_{\text{ver}}$}}
+\newcommand{\Ztotal}{\mbox{$Z_{\text{total}}$}}
+\newcommand{\Zfmax}{\mbox{$Z_{\text{fmax}}$}}
+\newcommand{\Zfpmax}{\mbox{$Z_{\text{fkmax}}$}}
+\newcommand{\Zfav}{\mbox{$Z_{\text{fav}}$}}
+\newcommand{\Zbiax}{\mbox{$Z_{\text{biax}}$}}
+\newcommand{\Zhom}{\mbox{$Z_{\text{hom}}$}}
+\newcommand{\IVOL}{\mbox{$V_{\text{ip}}$}}
+
+
+\newcommand{\gfmax}{\mbox{$\gamma_{\text{fmax}}$}}
+\newcommand{\gfpmax}{\mbox{$\gamma_{\text{fkmax}}$}}
+\newcommand{\gfav}{\mbox{$\gamma_{\text{fav}}$}}
+\newcommand{\gbiax}{\mbox{$\gamma_{\text{biax}}$}}
+\newcommand{\ghom}{\mbox{$\gamma_{\text{hom}}$}}
+
+\newcommand{\failp}{\mbox{$k$}}
+\newcommand{\fPS}{\mbox{$\varepsilon_1\left(\fx\right)$}}
+\newcommand{\sPS}{\mbox{$\varepsilon_2\left(\fx\right)$}}
+
+\newcommand{\eMacro}{\mbox{$\varepsilon$}}%_{\text{macro}}$}}
+\newcommand{\eMacroZero}{\mbox{$\varepsilon_0$}}%_{\text{macro}}$}}
+\newcommand{\FMacro}{\mbox{$F_{13}$}}%_{\text{macro}}$}}
+\newcommand{\ePMacro}{\mbox{$\dot{\varepsilon}$}}%_{\text{macro}}$}}
+\newcommand{\deltaEMacro}{\mbox{$\triangle\varepsilon$}}%_{\text{macro}}$}}
+\newcommand{\deltaT}{\mbox{$\triangle t$}}
+
+
+\newcommand{\FmaxBiaxHom}{\mbox{FmaxBiaxHom$15$}}
+\newcommand{\FmaxBiaxHomOut}{\mbox{FmaxBiaxHom$10$Out}}
+\newcommand{\FavBiaxHom}{\mbox{FavBiaxHom$15$}}
+\newcommand{\FmaxFavBiaxHom}{\mbox{FmaxFavBiaxHom$15$}}
+\newcommand{\FpmaxBiaxHomTen}{\mbox{FkmaxBiaxHom$10$}}
+\newcommand{\FpmaxBiaxHomFiveTen}{\mbox{FkmaxBiaxHom$15$}}
+
+\newcommand{\led}{\mbox{$l_{13}\left(t\right)$}}
+\newcommand{\ledn}{\mbox{$l_{13}\left(t=0\right)$}}
+\newcommand{\lzv}{\mbox{$l_{24}\left(t\right)$}}
+\newcommand{\lzvn}{\mbox{$l_{24}\left(t=0\right)$}}

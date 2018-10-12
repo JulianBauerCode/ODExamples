@@ -1,6 +1,6 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[german]{babel}
+\usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -32,12 +32,12 @@
 
 %%Add 4-th level of sections
 % Adjust formattign of paragraph
-\makeatletter
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-            {-2.5ex\@plus -1ex \@minus -.25ex}%
-            {1.25ex \@plus .25ex}%
-            {\normalfont\normalsize\bfseries}}
-\makeatother
+%\makeatletter
+%\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+%            {-2.5ex\@plus -1ex \@minus -.25ex}%
+%            {1.25ex \@plus .25ex}%
+%            {\normalfont\normalsize\bfseries}}
+%\makeatother
 %\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
 %\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
 %\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
@@ -76,16 +76,126 @@
 \tableofcontents
 \newpage
 
-\section{Dummy}
-\subsection{Damage evolution}
+\section{Problems}
 
-\subsubsection{Parameter}
-\subsubsection{Kraftberechnung}
-\subsection{Schädigung}
-\subsubsection{Initiierung}
-\subsubsection{Entwicklung}
+\subsection{Reaction kinetics}
+Source: \cite{Fritzen2013}
 
+\subsubsection{Problem statement}
+\begin{align}
+\dot{\vu}
+=
+\begin{bmatrix}
+\dot{u}_0\\
+\dot{u}_1\\
+\dot{u}_2
+\end{bmatrix}
+=
+\underbrace{
+	k_0
+	u_u
+	\begin{bmatrix}
+	-1\\
+	1\\
+	0
+	\end{bmatrix}
+}_{term 0}
++
+\underbrace{
+	k_1
+	u_1
+	u_2
+	\begin{bmatrix}
+	1\\
+	-1\\
+	0
+	\end{bmatrix}
+}_{term 1}
++
+\underbrace{
+	k_2
+	u_1
+	\begin{bmatrix}
+	0\\
+	-1\\
+	1
+	\end{bmatrix}
+}_{term 2}			\label{eq:reactionKinetics}
+\end{align}
 
+\begin{table}[!h]
+\centering
+\begin{tabular}{l|l}
+Symbol 		& Interpretation with $i \in [0,1,2]$\\ \hline
+$u_i$		& Contentration of particles of type $i$\\
+$k_i$		& Constant of proportionallity of term $i$\\
+$\dot{u}_i$ & Rate of change of $u_i$
+\end{tabular}
+\caption{Symbols in \autoref{eq:reactionKinetics}}
+\label{tab:01_symbols}
+\end{table}
+
+\subsubsection{Interpretation}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.4\textwidth]{01_reactionKinetics}
+\caption{Visualization of \autoref{eq:reactionKinetics}}
+\label{fig:01_vis}
+\end{figure}
+
+\paragraph*{Term0}
+Particles of type $0$ turn into particles of type $1$,
+decreasing the concentration $u_0$ and increasing $u_1$.
+The rate of change is proportional to the concentration $u_0$ with the
+constant of proportionallity $k_0$.
+
+\paragraph*{Term1}
+Particles of type $1$ turn into particles of type $0$,
+decreasing the concentration $u_1$ and increasing $u_0$.
+The rate of change is proportional to the product of the concentrations
+$u_0$ and $u_1$ with the constant of proportionallity $k_1$.
+This means, the presence of type $2$ particles catalyze the transition of type $1$ particels into type $0$ particles.
+Term0 and Term1 counteract each other.
+
+\paragraph*{Term2}
+Particles of type $1$ turn into particles of type $2$,
+decreasing the concentration $u_1$ and increasing $u_2$.
+The rate of change is proportional to the concentration $u_1$ with the
+constant of proportionallity $k_2$.
+
+\section{Python}
+
+\subsection{Code}
+
+\paragraph{Note:}
+Symbols of concentrations $u_i$ are replaced by $y_i$.
+
+\lstinputlisting[language=Python]{../01_reactionKinetics/reactionKinetics.py}
+
+\subsection{Pictures}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{../01_reactionKinetics/simple}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{../01_reactionKinetics/influence_method}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{../01_reactionKinetics/influence_k}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{../01_reactionKinetics/influence_y0}
+\end{figure}
+
+\FloatBarrier
 \newpage
 \listoffigures
 \listoftables
